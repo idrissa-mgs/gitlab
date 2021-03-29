@@ -1,0 +1,8 @@
+#logging
+joblib
+botocore
+sklearn
+numpy
+matplotlib
+pytest
+boto3
