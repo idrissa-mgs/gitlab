@@ -44,7 +44,7 @@ def export_model(model):
     print("---------- EXPORT ---------")
     file_name = './digits_model.joblib'
     dump(model, file_name)
-    upload_file(file_name=file_name, bucket = "jedha-bootcamp-idris", object_name="CI-CD"+file_name)
+    upload_file(file_name=file_name, bucket = "MY_BUCKET", object_name="file_name")
 
 def start():
     model = train_model()
