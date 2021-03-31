@@ -1,0 +1,26 @@
+image: python:3.8-buster
+
+stages:
+    - build_model_and_export
+    - basic_tests
+
+
+build_model :
+    stage : build_model_and_export
+    script :
+       
+        - apt-get update    
+        - apt-get install -y  python-pip
+        - pip install -r requirements.txt
+        - python machine_learning.py
+
+basic_tests:
+    stage : basic_tests
+    script : 
+        - apt-get update    
+        - apt-get install -y  python-pip
+        - pip install -r requirements.txt
+        - pytest
+    
+    
+
